@@ -13,5 +13,8 @@ Cours_AntoninDellanoce/
 *.fot
 *.cb
 *.cb2
-.*.lb
-
+*.lb
+*.bbl
+*.blg
+*.gz
+*.txss
