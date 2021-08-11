@@ -1,0 +1,53 @@
+\chapter{Spaces}
+Mathematical Space: Object based on a set with more structure.
+\section{Metric Space}
+A metric space is a set $X$ together with a metric distance $d: X \times X \to \R^+$.\\
+$d$ is a metric if it satisfies the following axioms:
+\begin{itemize}
+	\item Non-degenerative: $d(x,y)=0 \iff x=y$
+	\item Symmetric: $d(x,y) = d(y,x)$
+	\item Triangle inequality: $d(x,z) \leq d(x,y) + d(y,z)$
+\end{itemize}
+
+\section{Norm Space}
+A norm space is a set $X$ together with a norm $\abs{\_}: X \to \R^+$.\\
+$\abs{\_}$ is a norm if it satisfies the following axioms:
+\begin{itemize}
+	\item Non-degenerative: $\abs{x}=0 \iff x=0$
+	\item Homogeneity: $\abs{\lambda x} = \lambda \abs{x} \qquad \lambda \in \R^+$
+	\item Triangle inequality: $\abs{x+y} \leq \abs{x} + \abs{y}$
+\end{itemize}
+\begin{property}[Norm Implies Metric]
+	Letting $d(x,y) = \abs{x-y}$.
+\end{property}
+
+\section{Inner Product Space}
+An inner product space is a set $X$ together with an inner product $\inner{\_}{\_}: X \times X \to \C$.\\
+$\inner{\_}{\_}$ is an inner product if it satisfies the following axioms:
+\begin{itemize}
+	\item Linear (in $1^{\text{st}}$ argument): $\inner{\lambda x}{y} = \lambda \inner{x}{y} \quad \lambda \in \C$ and $\inner{x+x'}{y} = \inner{x}{y} +\inner{x'}{y}$
+	\item Conjugate symmetry: $\abs{x+y} \leq \abs{x} + \abs{y}$
+	\item Positive definiteness $\inner{x}{x}>0 \ \forall x \neq 0$
+	\item \textit{(implied)} Non-degenerative: $\inner{x}{0}=0$ and $\inner{0}{x}=0$
+	\item \textit{(implied)} Conjugate linear (in $2^{\text{nd}}$ argument): $\inner{x}{\lambda y} = \bar{\lambda} \inner{x}{y} \quad \lambda \in \C$ and $\inner{x}{y+y'} = \inner{x}{y} +\inner{x}{y'}$
+\end{itemize}
+\begin{property}[Inner Product implies Norm]
+	Letting $\abs{x} = \sqrt{\inner{x}{x}}$.
+\end{property}
+\begin{definition}[Orthogonal / Normal]
+	$x y orthogonal \iff \inner{x}{y}=0$
+\end{definition}
+\begin{property}[Pythagoras Theorem]
+	$x y orthogonal \implies \abs{x+y}^2 = \abs{x}^2 + \abs{y}^2$
+\end{property}
+\begin{property}[Parallelogram Identity]
+	$\abs{x+y}^2 +\abs{x-y}^2 = 2 (\abs{x}^2 + \abs{y}^2)$
+\end{property}
+\begin{property}[Polarization Identity]
+	$4 \inner{x}{y} = \abs{x+y}^2 - \abs{x-y}^2 + i(\abs{x+iy}^2 - \abs{x-iy}^2)$
+\end{property}
+
+
+
+
+
