@@ -1,0 +1,45 @@
+\chapter{Functions Properties}
+$$f: X \to Y \quad A \subseteq X, B \subseteq Y$$
+\begin{definition}[Image]
+	$f(A) = \{ y \in Y \mid \exists x \in A \text{ s.t. } f(x)=y \}$
+\end{definition}
+\begin{definition}[Inverse Image]
+	$f^{-1}(B) = \{ x \in X \mid f(x) \in B \}$
+\end{definition}
+\begin{definition}[Fiber]
+	Fiber of $y$ is inverse image of $\{y\}$.
+\end{definition}
+\begin{definition}[Well definedness]
+	$\forall x \in X, \exists ! y \in Y \text{ s.t. } f(x) = y$\\
+	%	-- or --\\
+	%	$\forall x \in X, \exists y \in Y \text{ s.t. } f(x) = y$\\
+	%	$\forall y,y' \in Y, y \neq y', f^{-1}(y) \cap f^{-1}(y') = \emptyset$
+\end{definition}
+\begin{definition}[Injectivity]
+	$\forall x,x' \in X, x \neq x', f(x) \neq f(x')$
+\end{definition}
+\begin{definition}[Surjectivity]
+	$\forall y \in Y, \exists x \in X \text{ s.t. } f(x) = y$
+\end{definition}
+\begin{definition}[Bijectivity]
+	Injectivity plus Surjectivity:
+	$\forall y \in Y, \exists! x \in X \text{ s.t. } f(x) = y$
+\end{definition}
+\begin{definition}[Invertibility]
+	$f^{-1}: Y \to X$ well defined.
+\end{definition}
+\begin{remark}[Alternative Definition of Inverse]
+	$f \circ f^{-1} = Id \mid_X$  and $f^{-1} \circ f = Id \mid_Y$
+\end{remark}
+\begin{remark}[Invertibility and Bijectivity]
+	$f$ bijective $\iff$ $f$ invertible.
+\end{remark}
+\begin{remark}[Inverse is Invertible]
+	$f^{-1}$ is invertible, and $(f^{-1})^{-1}=f$.
+\end{remark}
+\begin{property}[Injection between finite intervals]
+	$n,p \in \N^*$, there exists an injection $f:\left[ 1;n \right] \rightarrow \left[ 1;p \right]$ if and only if $n\leq p$.
+	%$n,p \in \N^*$, there exists an injection $f:\llbracket 1;n \rrbracket \rightarrow \llbracket 1;p \rrbracket$ if and only if $n\leq p$.
+\end{property}
+
+
