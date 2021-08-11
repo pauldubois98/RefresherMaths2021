@@ -1,0 +1,26 @@
+\chapter{Proofs methods}
+
+\subsection{Direct implication}
+Want to show $A$: may show $B$ and $B \implies A$, or $C$ and $C \implies B$ and $B \implies A$.
+
+\subsection{Case dis-junction}
+Split in cases.
+
+E.g.: show $n$ and $n^2$ have the same parity (take $n$ odd then $n$ even).
+
+\subsection{Contradiction}
+Suppose the opposite, derive a contradiction (i.e. $A$ and $\not A$) and conclude.
+
+E.g.: show $\sqrt{2} \not\in \Q$ (suppose $\sqrt{2}=\nicefrac{a}{b}$, WLOG $a,b \in \N$ co-prime).
+
+\subsection{Induction}
+Want to show $P_n$ for $n \geq n_0$: show $P_n \implies P_{n+1}$ and $P_{n_0}$.
+
+E.g.: show $\sum_{k=0}^{n} k = \frac{n(n+1)}{2}$ for all $n \in \N$.
+
+\subsection{Existence and Uniqueness}
+It is common to show existence and/or uniqueness.
+
+E.g.: Existence and uniqueness in Euclidean division: 
+$$\forall a \in \Z, b \in \N^*, \exists ! \ q \in \Z, r \in \left[ 0, b \right[ \cap \N \text{ s.t. } a=bq+r$$
+Use $q = \max\{ k \in \N \mid bk \leq a \}$, $r = a-bq$.
