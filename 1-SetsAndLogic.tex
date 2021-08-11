@@ -52,6 +52,10 @@ Need to be careful when defining set: some definitions are pathological.
 \begin{definition}[Subset / Inclusion]
 	$X \subseteq Y$ if $\forall x \in X, x \in Y$
 \end{definition}
+\begin{definition}[Disjoint Sets]
+	$X$ and $Y$ are disjoint if $\forall x \in X, x \not\in Y$ (or if $\forall y \in Y, y \not\in X$).
+\end{definition}
+
 \begin{definition}[Powerset]
 	$\Pow{X} = \{ Y \mid Y \subseteq X \}$\\
 	e.g.: $\Pow{\{1,2,3\}}=\{ \emptyset, \{1\},\{2\},\{3\}, \{1,2\},\{1,3\},\{2,3\}, \{1,2,3\} \}$
@@ -72,6 +76,9 @@ Need to be careful when defining set: some definitions are pathological.
 \begin{definition}[Intersection]
 	$X \cap Y = \{ z \mid (z \in X) \land (z \in Y) \}$
 \end{definition}
+\begin{remark}[Disjoint Sets and Intersection]
+	Disjoint sets have empty intersection.
+\end{remark}
 \begin{definition}[Disjunction]
 	$x \lor y = \min(x+y,1)$
 \end{definition}
@@ -130,6 +137,9 @@ Need to be careful when defining set: some definitions are pathological.
 \begin{property}[Implication and Inclusion]
 	If $\forall x \in X, P_1(x) \implies P_2(x)$, then $\{ x \in X \mid P_1(x) \} \subset \{ x \in X \mid P_2(x) \}$.
 \end{property}
+\begin{proof}
+	Trivial.
+\end{proof}
 \begin{definition}[If and only if]
 	$x \iff y$
 \end{definition}
