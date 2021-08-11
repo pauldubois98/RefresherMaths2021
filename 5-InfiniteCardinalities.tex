@@ -1,0 +1,36 @@
+\chapter{Infinite Cardinalities}
+\begin{definition}[Alphabet]
+	$\mathcal{A} = \{ a,b,c, \dots, z \}$
+\end{definition}
+To compare the size of infinite sets, we use bijections, injections:
+\begin{definition}[Comparing Sets]
+	$f: X \to Y \text{ injective} \implies \card{X} \leq \card{Y}$
+	$f: X \to Y \text{ surjective} \implies \card{X} \geq \card{Y}$
+	$f: X \to Y \text{ bijective} \implies \card{X} = \card{Y}$
+\end{definition}
+Note that together with $\card{\left[ 1,n \right]}=n$, this defines cardinality.
+\begin{definition}[Countable sets]
+	A set is countable if it has the same cardinality as the naturals (i.e. $X$ is countable if $\card{X} = \card{\N}$).
+\end{definition}
+
+\begin{property}[Countable Union Finite]
+	$\card{\N \cup \mathcal{A}} = \card{\N}$
+\end{property}
+\begin{property}[Countable Union Countable / Integers]
+	$\card{\Z} = \card{\N \cup \N^*} = \card{\N}$
+\end{property}
+\begin{property}[Countable Union of Finites]
+	$\card{X_n}<\infty \ \forall n \in \N \implies \card{\bigcup_{n \in \N} X_n} = \card{\N}$
+	%proof: stack the X_n on \N
+\end{property}
+\begin{property}[Countable Union of Countables / Rationals]
+	$\card{\Q} = \card{\bigcup_{n \in \N^*} \{ \nicefrac{m}{n} \mid m \in \Z \}} = \card{\N}$
+\end{property}
+\begin{property}[Power set of Countables / Reals]
+	$\card{ \left[ 0,1 \right[ } = \card{\Pow{\N}} = \card{\{0,1\}^{\N}} > \card{\N}$
+\end{property}
+
+
+
+
+
