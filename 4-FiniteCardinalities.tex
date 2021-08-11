@@ -1,0 +1,55 @@
+\chapter{Finite Cardinalities}
+
+\begin{definition}[Cardinality] For finite sets:\\
+	\emph{\underline{Intuitively}:} $\card{X} = n \in \N$ if there are $n$ elements in the set.\\
+	\emph{\underline{Mathematically}:} $\card{X} = n \in \N$ if there is a bijection between $X$ and $\llbracket 1,n \rrbracket$.
+\end{definition}
+\begin{property}[Cardinality of Disjoints]
+	$X,Y$ disjoint sets: $\card{X \cup Y} = \card{X} + \card{Y}$\\
+	Extension: $X_1, \dots, X_n$ pairwise disjoint sets (i.e. $X_i \cap X_j = \emptyset \ \forall i \neq j$): $\card{\bigcup_{k=1}^n X_k} = \sum_{k=1}^{n} \card{X_k}$
+\end{property}
+\begin{proof}
+	Shift bijection of $Y$ by $\card{Y}$; use induction.
+\end{proof}
+\begin{property}[Cardinality of Complement]
+	$X \subseteq Y$: $\card{Y \setminus X} = \card{Y} - \card{X}$
+\end{property}
+\begin{proof}
+	Use previous property with $X$ \& $Y \setminus X$ disjoint.
+\end{proof}
+\begin{property}[Cardinality of Cartesian Products]
+	$X,Y$ sets: $\card{X \times Y} = \card{X} * \card{Y}$\\
+	Extension: $X_1, \dots, X_n$ sets: $\card{\prod_{k=1}^n X_k} = \prod_{k=1}^{n} \card{X_k}$
+	%proof: 
+\end{property}
+\begin{proof}
+	$X \times \{y_k\}$  are all disjoint for $k \in \llbracket 1,\card{Y} \rrbracket$; use induction.
+\end{proof}
+\begin{property}[Cardinality of Sets of Functions]
+	%Similar to Cartesian product:\\
+	$\card{ \{f: X \to Y\} } = \card{Y}^{\card{X}}$
+\end{property}
+\begin{proof}
+	Just count!
+\end{proof}
+\begin{property}[Cardinality of Sets of Injections]
+	$\card{ \{f: X \to Y \mid f \text{ injective} \} } = \frac{\card{Y}!}{(\card{Y}-\card{X})!}$
+\end{property}
+\begin{proof}
+	Count (without repetition).
+\end{proof}
+\begin{property}[Cardinality of Sets of Surjections]
+	$\card{ \{f: X \to Y \mid f \text{ surjective} \} } = \card{Y}^{\card{X}} - \card{Y}*(\card{Y}-1)^{\card{X}}$
+\end{property}
+\begin{proof}
+	All functions but the non surjective ones.
+\end{proof}
+\begin{property}[Cardinality of Sets of Bijections]
+	$\card{ \{f: X \to Y \mid f \text{ bijective} \} } = \card{Y}! = \card{X}!$
+\end{property}
+\begin{proof}
+	Bijection is an injection between two sets of the same size.
+\end{proof}
+
+
+
