@@ -37,9 +37,25 @@ $$f: X \to Y \quad A \subseteq X, B \subseteq Y$$
 \begin{remark}[Inverse is Invertible]
 	$f^{-1}$ is invertible, and $(f^{-1})^{-1}=f$.
 \end{remark}
-\begin{property}[Injection between finite intervals]
-	$n,p \in \N^*$, there exists an injection $f:\left[ 1;n \right] \rightarrow \left[ 1;p \right]$ if and only if $n\leq p$.
-	%$n,p \in \N^*$, there exists an injection $f:\llbracket 1;n \rrbracket \rightarrow \llbracket 1;p \rrbracket$ if and only if $n\leq p$.
+\begin{property}[Injections between finite intervals]
+	$m,n \in \N^*$, there exists an injection $f:\llbracket 1;m \rrbracket \rightarrow \llbracket 1;n \rrbracket$ if and only if $m\leq n$.
 \end{property}
-
+\begin{property}[Bijections between finite intervals]
+	$n,m \in \N^*$, there exists a bijection $f:\llbracket 1;m \rrbracket \rightarrow \llbracket 1;n \rrbracket$ if and only if $m=n$.
+\end{property}
+\begin{proof}
+	Use last property \& inverse.
+\end{proof}
+\begin{property}[Compositions]
+	Composition preserve injectivity/surjectivity/bijectivity/invertibility:
+	$f: X \to Y, \ g: Y \to Z \text{ injectives } \implies f \circ g \text{ is injective}$\\
+	$f: X \to Y, \ g: Y \to Z \text{ surjectives } \implies f \circ g \text{ is surjective}$\\
+	$f: X \to Y, \ g: Y \to Z \text{ bijections/invertibles } \implies f \circ g \text{ is bijective/invertible}$
+\end{property}
+\begin{proof}
+	Trivial
+\end{proof}
+\begin{property}
+	An injection between two sets of the same size is bijective.
+\end{property}
 
