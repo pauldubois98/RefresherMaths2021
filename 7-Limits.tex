@@ -1,0 +1,198 @@
+\chapter{Limit Behaviors}
+
+%\begin{definition}[Sequence]
+%	$(x_n)_{n\in \N}$ is a sequence in $\F$ if $x_n \in \F \ \forall n \in \N$
+%\end{definition}
+
+\section{Convergence \& Divergence}
+
+\begin{definition}[$(x_n) \subseteq \F$ converges to $x \in \F$]
+	$\,\forall \varepsilon > 0, \ \exists N \text{ s.t. } \forall n \geq N, \ d(x_n,x) < \varepsilon$
+\end{definition}
+We write $x_n \xrightarrow[n \to +\infty]{} x \text{ or } \lim\limits_{n \to +\infty} x_n = x$.
+Note that convergence is defined w.r.t. a metric (or a norm/inner product, which induces a metric).
+
+\begin{definition}[$(x_n) \subseteq \R$ diverges to $+\infty$]
+	$\,\forall M \in \R, \ \exists N \text{ s.t. } \forall n \geq N, \ x_n > M$
+\end{definition}
+We write $x_n \xrightarrow[n \to \infty]{} +\infty \text{ or } \lim\limits_{n \to +\infty} x_n = +\infty$.
+Note that divergence is only defined over $\R$; divergence to $-\infty$ is defined similarly.
+
+\begin{definition}[Sub-sequence]
+	$\phi: \N \to \N$ strictly increasing defines the sub-sequence $(x_{\phi(n)})$ of the sequence $(x_n)$.
+\end{definition}
+
+\begin{property}[Convergence \& Divergence of Sub-sequences]
+	$x_n \to x \implies x_{\phi(n)} \to x$ \& \\
+	$x_n \to +\infty \implies x_{\phi(n)} \to +\infty$
+\end{property}
+
+\begin{definition}[$f:X \to Y$ converges to $y \in Y$ at $x \in X$]
+	$\forall \epsilon>0, \ \exists \delta>0 \text{ s.t. } d_X(x,x')<\delta \implies d_Y(y,y')<\epsilon$
+\end{definition}
+Equivalent definition: $\forall x_n \to x \text{ as } n \to +\infty, y_n = f(x_n) \to y$; we write $\lim\limits_{x' \to x} f(x') = y$
+
+\begin{question}
+	\begin{itemize}
+		\item $\lim\limits_{x \to a} \phi(f(x))$
+		\item $\lim\limits_{x \to a} f(x)+g(x)$
+		\item $\lim\limits_{x \to a} f(x)*g(x)$
+		\item $\lim\limits_{x \to a} f(x)/g(x) \qquad g(x) \neq 0$
+	\end{itemize}
+\end{question}
+\begin{proof}
+	left as exercise
+\end{proof}
+
+\begin{property}["Determinate Forms"]
+	$\frac{1}{0} = \infty$, $\frac{1}{\infty} = 0$
+\end{property}
+\begin{property}["Indeterminate Forms"]
+	$\frac{0}{0}$, $\frac{\infty}{\infty}$, $0 \times \infty$, $1^\infty$, $\infty - \infty$, $0^0$, $\infty^0$
+\end{property}
+E.g.: $x^2 \times \frac{1}{x} \to \infty$; $x^2 \times \frac{1}{x^2} \to 1$; $x^2 \times \frac{1}{x^3} \to 0$.
+
+\begin{theorem}[Fixed Point Theorem]
+	$x_{n+1} = f(x_n) \text{ and } (x_n) \to l \implies l = f(l)$ (i.e. $l$ is a fixed point of $f$). 
+\end{theorem}
+\begin{proof}
+	easy: $x_n$ and $x_{n+1}$ must both go to $l$
+\end{proof}
+E.g.: $x_0=1$ and $x_{n+1}=\frac{x_n^2+2}{2x_n}$ give $x_n \to \sqrt{2}$.
+
+
+\section{Maximum vs Supremum}
+
+\begin{definition}[$a$ maximum of $A$]
+	$a \in A$ and $\forall x \in A, x \leq a$
+\end{definition}
+Maximum doesn't always exists (even if $A$ is bounded).
+\begin{definition}[$a$ supremum of $A$]
+	$\forall \epsilon>0, \exists \, x \in A \text{ s.t. } a-\epsilon \leq x \leq a$
+\end{definition}
+Supremum is the "smallest upper bound". Exists if $A$ is bounded.
+
+\begin{question}
+	Max, sup of $\left[ 0,1 \right]$, $\left[ 0,1 \right[$, $\R^+$.
+\end{question}
+
+\begin{remark}
+	Can define minimum \& infimum similarly
+\end{remark}
+
+\begin{theorem}[Extremum \& Convergence]
+	$(x_n) \subseteq \R$ increasing:
+	\begin{itemize}
+		\item if $(x_n)$ is upper-bounded, then $\lim\limits_{n \to +\infty} x_n = \sup \left\{ x_n \mid n \in \N \right\}$
+		\item else, $\lim\limits_{n \to +\infty} x_n = +\infty$
+	\end{itemize}
+\end{theorem}
+\begin{proof}
+	easy (by cases)
+\end{proof}
+
+
+
+\section{Continuity}
+
+\begin{definition}[$f$ continuous at $x$]
+	$\lim\limits_{x' \to x} f(x') = f(x)$
+\end{definition}
+\begin{definition}[$f$ continuous on $X$]
+	$\forall x \in X, f \text{ continuous } x$
+\end{definition}
+\begin{question}
+	Show $x^n$ is continuous (for all $n$).
+\end{question}
+"can be plotted in a single trace/line; without lifting the pen"
+[Lipschitz-continuous??]
+
+
+
+\section{Asymptotic Analysis}
+
+\begin{definition}[Asymptote]
+	"A curve is a line such that the distance between the curve and the line approaches zero as one or both of the $x$ or $y$ coordinates tends to infinity." \\
+	i.e. $\lim\limits_{x \to \infty} f(x)-l(x) = 0$ (in the case of $x \to \infty$).
+\end{definition}
+\paragraph{Horizontal Asymptote}
+E.g.: $f(x) = \frac{x+1}{x}$ (asymptote is $y=1$ as $x \to \infty$).
+\paragraph{Vertical Asymptote}
+E.g.: $g(x) = \frac{1}{x-2}$ (asymptote is $x=2$ as $y \to \infty$).
+\paragraph{Oblique Asymptote}
+E.g.: $h(x) = \frac{3x^2+2x+1}{x}$ (asymptote is $y=3x+2$ as $x,y \to \infty$).
+
+
+
+\section{Series}
+Joke: I once asked someone out to "checkout some series", they went home disappointed... still don't know why.
+\begin{definition}[Series]
+	A series is a sequence $(S_n)$ with general term $x_n$ defined by $S_n = \sum_{k=0}^{n} x_k$.\\
+	It is alternating if $x_k x_{k+1} < 0 \ \forall k \in \N$.
+\end{definition}
+\begin{definition}[Series Convergence]
+	The series $(S_n)$ converges if $\left( \sum_{k=0}^{n} x_k \right)$ converges as a sequence.
+	The series $(S_n)$ converges absolutely if $\left( \sum_{k=0}^{n} \abs{x_k} \right)$ converges as a sequence.
+\end{definition}
+E.g.: $\sum_{k=1}^n 1$ is obviously divergent;
+$\sum_{k=1}^n \frac{1}{2^k}$ is convergent (to 1).
+
+\begin{property}
+	$\sum_{k=0}^n a^k$ is:
+	\begin{itemize}
+		\item Absolutely convergent for $\abs{a} < 1$, converging to $\frac{1}{1-a}$.
+		\item Divergent for $\abs{a} \geq 1$, bounded for $a=-1$, unbounded else.
+	\end{itemize}
+\end{property}
+\begin{proof}
+	easy (sum of geometric series)
+\end{proof}
+
+\begin{property}[Necessary Condition for Convergence of Series]
+	If $(S_n)$ converges, then $x_n \to 0$.
+\end{property}
+\begin{proof}
+	trivial (by contradiction)
+\end{proof}
+However, his is \textbf{not} a sufficient condition: $\sum_{k=1}^n \frac{1}{k}$ is a counter-example.
+
+\begin{property}[Criterion for Convergence of Alternating Series]
+	If $\sum_{n \in \N} x_n$ is alternating, $(\abs{x_n})$ is decreasing, and $\lim\limits_{n \to \infty} x_n = 0$, then $\sum_{n \in \N} x_n$ converges.
+\end{property}
+\begin{proof}
+	WLOG, $x_{2n}>0$ and $x_{2n-2}<0$:
+	$\sum_{k=0}^{2n} x_k$ is increasing, and upper bounded by $x_0+x_1$, therefore converges;
+	similarly, $\sum_{k=0}^{2n+1} x_k$ is decreasing, and lower bounded by $x_0$, therefore converges as well.
+	$\sum_{k=0}^{2n} x_k$ and $\sum_{k=0}^{2n+1} x_k$ must have the same limit as $\sum_{k=0}^{2n+1} x_k - \sum_{k=0}^{2n} x_k = x_{2n+1} \to 0$.
+	Thus, $\sum_{k=0}^{2n} x_k$ must be convergent.
+\end{proof}
+
+\begin{property}[Comparison Test for Convergence of Series]
+	$\forall n \geq n_0, 0 \leq a_n \leq b_n$:
+	\begin{itemize}
+		\item If $\sum_{n \in \N} b_n$ converges, then $\sum_{n \in \N} a_n$ converges as well.
+		\item If $\sum_{n \in \N} a_n$ diverges, then $\sum_{n \in \N} b_n$ diverges as well.
+	\end{itemize}
+\end{property}
+\begin{proof}
+	easy by def
+\end{proof}
+E.g.: $\sum_{n \geq 2} \frac{1}{n^2}
+\leq \sum_{n \geq 2} \frac{1}{n(n+1)}
+= \sum_{n \geq 2} \frac{1}{n}-\frac{1}{n+1}
+= \frac{1}{2} < \infty$
+
+\begin{property}[Integration Test for Convergence of Series]
+	$\sum_{n \in \N} f(n) \leq \int_{x=0}{\infty} f(x)$\\
+	So if $\int_{x=0}{\infty} f(x) < \infty$, and $f(x)$ is decreasing, then $\sum_{n \in \N} f(n)$ converges.
+\end{property}
+\begin{proof}
+	easy by def
+\end{proof}
+E.g.: $\sum_{n \geq 2} \frac{1}{n^2}
+\leq \int_{x = 2}^{\infty} \frac{1}{x^2}
+= \left[ -\frac{1}{x} \right]_{x=2}^{x=\infty}
+= -0 +\frac{1}{2} < \infty$
+
+
+
