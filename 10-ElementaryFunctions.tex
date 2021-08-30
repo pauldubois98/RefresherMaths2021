@@ -1,0 +1,190 @@
+\chapter{Elementary Functions}
+
+\section{Enumeration}
+\textit{[Enumeration of the elementary function by Liouville from
+1833 to 1841:]}
+
+\begin{itemize}
+	\item Polynomials function of $\R\left[ x \right]$: $1$, $x$, $\pi + 3.2x^2+ \frac{7}{8}x^{2021}$, ...
+	\item Hyperbolic functions: exponential ($e^x$), hyperbolic sinus ($\sinh(x) = \frac{e^x - e^{-x}}{2}$), hyperbolic cosinus ($\cosh(x) = \frac{e^x - e^{-x}}{2}$), ...
+	\item Trigonometric functions: $\cos$, $\sin$, $\tan$,...
+	\item Inverse functions of the previous functions: logarithmic functions, inverse
+	trigonometric, ...
+\end{itemize}
+
+Closed under derivative, but not under integration:\\
+e.g.: $\int_{a}^{b} \frac{\sin(x)}{x}dx = \text{Si}(b) - \text{Si}(a)$ where $\text{Si}(x)$ cannot be expressed in terms of elementary functions (it is defined by the area under the curve of $\frac{\sin(x)}{x}$).
+
+\section{Properties}
+\subsection{Polynomials Functions}
+\begin{definition}
+	$\R \left[ x \right]$ is the set of polynomials of $x$ with real coefficients.
+\end{definition}
+\begin{property}
+	All polynomials are continuous \& differentiable, with $(x^n)' = nx^{(n-1)}$.
+\end{property}
+\begin{proof}
+	$x$ is continuous, then use algebra of continuous functions \& by induction.
+\end{proof}
+\begin{corollary}
+	$\left( x^n \right)^{(k)} = \frac{n!}{(n-p)!}x^{n-p} = p! \binom{n}{p} x^{n-p}$
+\end{corollary}
+
+\paragraph{Degree}
+\begin{definition}
+	$P = \sum_{k=0}^{n} a_k x^k \in \R \left[ x \right] \implies \degree{P} = n$\\
+	by convention, $\degree{P}=-\infty \text{ if } P \equiv 0$
+\end{definition}
+\begin{property}[Algebra of degrees]
+	\begin{itemize}
+		\item $\degree{P+Q} = \max(\degree{P}, \degree{Q})$
+		\item $\degree{P*Q} = \degree{P}+\degree{Q}$
+	\end{itemize}
+\end{property}
+\begin{proof}
+	Exercise
+\end{proof}
+
+\paragraph{Roots}
+\begin{definition}[Root orders]
+	$P \in \R\left[ x \right]$ has a root at $x$ if $P(x)=0$
+	$P \in \R\left[ x \right]$ has a root of order $n$ at $x$ if $P^{(k)}(x)=0$ for all $k<n$ and $P^{(n)}(x) \neq 0$
+\end{definition}
+[draw graphical interpretation of roots multiplicities]
+\begin{property}[Roots and Factorization]
+	$P$ has a root of order $k$ at $x'$ iff $P(x) = (x-x')^kQ(x)$ where $Q$ is a polynomial s.t. $\degree{P}=k+\degree{Q}$.
+\end{property}
+\begin{proof}
+	definition for $\implies$ direction, Taylor formula for $\impliedby$ direction
+\end{proof}
+\begin{corollary}[Degree and Number of roots]
+	If roots of $P$ have multiplicities $k_1, k_2, k_3, \dots, k_n$, then $\sum_{i=1}^n k_i \leq \degree{P}$.
+	"\#roots $\leq$ degree"
+\end{corollary}
+\begin{proof}
+	easy using previous property
+\end{proof}
+
+\subparagraph{The Constant case}
+No root(s) except for $P \equiv 0$
+
+\subparagraph{The Linear case}
+One root: $P(x)=ax+b \implies x=-\frac{b}{a} \text{ is the only root}$.
+
+\subparagraph{The Quadratic case}
+$$P(x)=ax^2+bx+c \qquad \Delta=b^2-4ac$$
+\begin{itemize}
+	\item $\Delta>0$: $P$ has two roots: $x_1=\frac{-b-\sqrt{\Delta}}{2a}$ and $x_2=\frac{-b+\sqrt{\Delta}}{2a}$
+	\item $\Delta=0$: $P$ has one root: $x_0=\frac{-b}{2a}$
+	\item $\Delta>0$: $P$ has no root(s)
+\end{itemize}
+\begin{proof}
+	"force factorization":
+	$ax^2+bx+c=0
+	\iff \left( x+\frac{b}{2a} \right)^2 -\frac{b^2}{4a} + \frac{c}{a} = 0$
+	which has solution(s) only if $\Delta \geq 0$
+\end{proof}
+
+\paragraph{Taylor formula}
+\begin{theorem}[Binomial theorem]
+	$(x+y)^n = \sum_{k=0}^n \binom{n}{k} x^ny^{n-k}$
+\end{theorem}
+\begin{proof}
+	by induction
+\end{proof}
+\begin{theorem}[Taylor for polynomials]
+	$P(x) = \sum_{k=0}^{+\infty} \frac{P^{(k)}(\alpha)}{p!}(x-\alpha)^k$
+\end{theorem}
+\begin{proof}
+	prove it for $P(x)=x^n$, using the binomial theorem
+\end{proof}
+
+\subsection{Hyperbolic Functions}
+\paragraph{Exponential}
+\begin{proposition}
+	The series $\sum_{n \in \N} \frac{x^n}{n!}$ converges for all $x \in \R$.
+\end{proposition}
+\begin{proof}
+	easy
+\end{proof}
+\begin{definition}
+	The series $\sum_{n \in \N} \frac{x^n}{n!}$ is called the exponential function, and denoted $\exp (x)$ or $e^x$.
+\end{definition}
+\begin{property}
+	\begin{itemize}
+		\item $\exp$ is continuous
+		\item $\exp$ is differentiable, and $\exp' = \exp$
+		\item $\exp(x+y) = \exp(x) \exp(y)$
+		\item $\exp(-x) = 1/\exp(x)$
+		\item $\exp(x) > 0$
+		\item $\exp$ is increasing on all $\R$
+		\item $\lim\limits_{x \to +\infty} \exp(x) = +\infty$ and $\lim\limits_{x \to -\infty} \exp(x) = 0$
+		\item $\lim\limits_{x \to + \infty} \frac{e^x}{x^n} = +\infty$ "$e^x$ grows "faster" than $x^n$ for any $n$"
+	\end{itemize}
+\end{property}
+\begin{proof}
+	\begin{itemize}
+		\item technical (on any segment of $\R$, the partial sum converges uniformly to $\exp$; partial sums are continuous, so $\exp$ is continuous on all segments of $\R$, thus continuous on $\R$)
+		\item differentiate each term in partial sum
+		\item from series def \& binomial theorem
+		\item corollary, ask audience
+		\item corollary, ask audience
+		\item corollary, ask audience
+		\item $e^x>x \text{ for } x>0$ gives limit as $x \to +\infty$, then use inverse
+	\end{itemize}
+\end{proof}
+[Draw exp curve]
+
+\paragraph{Logarithmic}
+\begin{definition}
+	The inverse function of $\exp$ is $\ln$ or $\log$: $\ln(x) = y \text{ s.t. } x = e^y$. Note $\exp: \R \to \R^{+*}$ so $\ln: \R^{+*} \to \R$, so $\exp(\ln(x)) = x \ \forall x \in \R^{+*}$ and $\ln(\exp(x)) = x \ \forall x \in \R$.
+\end{definition}
+[Draw log curve]
+\begin{property}
+	\begin{itemize}
+		\item $\ln(xy)=\ln(x)+\ln(y)$
+		\item $\ln(x/y)=\ln(x)-\ln(y)$
+		\item $\ln'(x) = 1/x$
+		\item $\ln(0)=1$
+		\item $\lim\limits_{x \to +\infty} \ln(x) = +\infty$ and $\lim\limits_{x \to 0} \ln(x) = -\infty$
+		\item $\lim\limits_{x \to + \infty} \frac{\ln(x)}{x^\epsilon} = 0$ "$\ln(x)$ grows "slower" than $x^\epsilon$ for any $\epsilon > 0$"
+	\end{itemize}
+\end{property}
+\begin{proof}
+	\begin{itemize}
+		\item use properties of $\exp$
+		\item use properties of $\exp$
+		\item use properties of $\exp$
+		\item use $\exp(0)=1$
+		\item use limits of $\exp$
+	\end{itemize}
+\end{proof}
+fun fact: cosh is the shape of a rope attached at both ends
+
+\subsection{Trigonometric Functions}
+[draw triangle def of cos, sin \& tan, then graph them, observe periodicity, observe sin is cos "shifted" by pi/2; observe the location of zeros; write math def of these observations]
+
+\begin{property}[Derivatives \& Integrals of Trigonometric Functions]
+	\begin{itemize}
+		\item $\sin' = \cos$
+		\item $\cos' = -\sin$
+		\item $\tan' = 1/\cos^2$
+		\item $\int \sin = -\cos + C$
+		\item $\int \cos = \sin + C$
+		\item $\int \tan = -\ln(\abs{\cos}) + C$
+	\end{itemize}
+\end{property}
+\begin{proof}
+	\begin{itemize}
+		\item technical
+		\item technical
+		\item use quotient rule
+		\item use derivative result
+		\item use derivative result
+		\item technical, can be checked easily
+	\end{itemize}
+\end{proof}
+
+
+
+
