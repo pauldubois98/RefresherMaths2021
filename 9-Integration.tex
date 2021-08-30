@@ -1,0 +1,33 @@
+\chapter{Integration}
+
+Integral of $f$: area under a curve of $f$ (draw scheme).
+
+\begin{proof}
+	Take $f$ continuous;
+	let $A(x)$ be the area under the curve of $f$, from $0$ to $x$.
+	
+	Then $A(x+h) - A(x) = f(x).h + \epsilon(h)$; as $h \to 0$, $\epsilon(h) \to 0$ by continuity of $f$.\\
+	Then get $f(x) = \frac{A(x+h) -A(x)}{h}$ as $h \to 0$.
+	Thus, $A'(x) = f(x)$.
+\end{proof}
+\begin{notation}
+	Integral from $a$ to $b$ of $f$ is $\int_{a}^{b} f(x) dx$
+\end{notation}
+\begin{theorem}[Fundamental Theorem of Calculus]
+	If $F(x) = \int_{a}^{x} f(t) dt$, then $F$ is uniformly continuous and differentiable, with derivative $F' = f$
+\end{theorem}
+\begin{corollary}
+	$\int_{a}^{b} f(x) dx = F(b) - F(a)$ where $F$ is an anti-derivative of $f$ (i.e. $F' = f$\footnote{Anti-derivative are \textbf{not} unique (can add a constant).})
+\end{corollary}
+
+Integrals may also be approximated via partial sums; this is how computers calculate integrals (draw picture).
+
+Integration is the "inverse" of differentiation: $\int f = F + C$ where $C \in \R$ and $F' = f$.\\
+So $\int f' = f + C$ and $\left( \int f \right)' = f$
+
+Note that not all functions are integrable in terms of elementary functions (e.g.: $\frac{\sin(x)}{x}$).
+Note that not all functions are integrable in terms of area under the curve either (e.g.: $f(x)=0 \text{ if } x \in Q, f(x)=1 \text{ if } x \not\in \Q$).
+However, "most" usual functions are integrable in terms of area under the curve (any continuous or monotone function is, so usually do not worry about it in applied maths).
+
+Note that integrable does \textbf{not} imply differentiable/continuous (e.g. floor function); and differentiable does \textbf{not} imply anti-derivative exists in terms of elementary functions (e.g. $\frac{\sin(x)}{x}$).
+[draw diagram of implications: integrable area; integrable anti-derivative; continuous; differentiable]
