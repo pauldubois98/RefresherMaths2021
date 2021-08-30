@@ -1,0 +1,63 @@
+\chapter{Smoothness}
+
+%%def
+Want to measure how "steep" a curve is at a pt $x_0$: take linear approx. from $x_0$ to $x$ (take the steep of the line), and let $x \to x_0$.\\
+Formally:
+\begin{definition}
+	$f'(x_0) = \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$
+	$f$ is differentiable at $x_0$ if the limit $f'(x_0) = \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$ exists.
+	$f$ is differentiable on $I$ if the limit $f'(x_0) = \lim\limits_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$ exists for all $x_0 \in I$.
+\end{definition}
+
+%%propr
+\begin{property}[Differentiable implies the continuous]
+	$f \text{ differentiable at } x_0 \implies f  \text{ continuous at } x_0$ 
+\end{property}
+\begin{proof}
+	Easy
+\end{proof}
+The absolute value is continuous but not differentiable at $x=0$.
+
+The Weierstrass function is an example of a real-valued function that is continuous everywhere but differentiable nowhere.
+
+\begin{property}[Operations on Derivatives]
+	\begin{itemize}
+		\item $\left( f+g \right)' = f'+g'$
+		\item $\left( f*g \right)' = f'*g+f*g'$ "product rule"
+		\item $\left( f/g \right)' = \frac{f'*g+f*g'}{g^2}f'+g' \qquad g \neq 0$ "quotient rule"
+		\item $\left( f(g) \right)' = f'(g)*g'$ "chain rule"
+	\end{itemize}
+\end{property}
+\begin{proof}
+	\begin{itemize}
+		\item linearity of limits
+		\item from def
+		\item from def
+		\item from def
+	\end{itemize}
+\end{proof}
+
+\begin{property}[Sign of the derivative]
+	$f' > 0 \text{ on } I \implies f \text{ strictly increasing on } I$
+\end{property}
+\begin{proof}
+	Clear graphically; mathematically, use mean value theorem.
+\end{proof}
+
+%%order of smoothness
+Can (try to) differentiate the derivative $f'$ of $f$, giving $f'' = f^{(2)}$.
+Can then (try to) differentiate $f''$ giving $f''' = f^{(3)}$.
+\begin{definition}
+	$C \left[ I \right]$ is the set of continuous functions on $I$.
+	\begin{itemize}
+		\item If $f'$ exists, $f$ is differentiable.
+		\item If $f''$ exists, $f$ is twice differentiable.	
+		\item If $f^{(k)}$ exists, $f$ is $k$-times differentiable.
+	\end{itemize}
+	\begin{itemize}
+		\item If $f'$ exists and is continuous, then $f$ is continuously differentiable.
+		\item If $f''$ exists and is continuous, then $f$ is twice continuously differentiable.
+		\item If $f^{(k)}$ exists and is continuous, then $f$ is $k$-times continuously differentiable.
+	\end{itemize}
+	$C^k \left[ I \right]$ is the set of functions $k$-times continuously differentiable on $I$.
+\end{definition}
