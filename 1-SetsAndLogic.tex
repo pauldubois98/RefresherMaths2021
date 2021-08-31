@@ -10,9 +10,8 @@
 \end{notation}
 Need to be careful when defining set: some definitions are pathological.
 \begin{remark}[Russell Paradox]
-	Take $U = \{X \mid X \not\in X\}$.
-	X in U => U not in U, U is a set, so not all sets are in U
-	X not in U => X is a set
+	Take $Y = \{x \mid x \not\in x\}$.
+	$Y \in Y \iff Y \not\in Y$
 \end{remark}
 \begin{notation}[Usual Sets]
 	$\B$, $\N$, $\Z$, $\Q$, $\R$, $\C$, $\N^*$, $\R^+$...
@@ -143,22 +142,30 @@ Need to be careful when defining set: some definitions are pathological.
 \begin{definition}[If and only if]
 	$x \iff y$
 \end{definition}
+\begin{question}
+	Express in terms of and, or, not:
+	\begin{itemize}
+		\item $\oplus$
+		\item $\implies$
+		\item $\impliedby$
+		\item $\iff$
+	\end{itemize}
+	Write 1st and 2nd digit of addition of 3 binary numbers $a$, $b$, $c$.
+\end{question}
 
 \subparagraph{Negation of quantified propositions}
 \begin{property}[Negation of $\forall$]
 	$\mathrm{not}(\forall x\in X, P(x)) = \exists x\in X, \mathrm{not}(P(x))$
 \end{property}
 \begin{property}[Negation of $\exists$]
-	$\mathrm{not}(\exists x\in X, P(x)) = \exists x\in X, \mathrm{not}(P(x))$
+	$\mathrm{not}(\exists x\in X, P(x)) = \forall x\in X, \mathrm{not}(P(x))$
 \end{property}
 \begin{notation}[Quantifiers and the empty set]
 	$\forall x \in \emptyset, \ \dots$ is true ;
 	$\exists x \in \emptyset, \ \dots$ is false
 \end{notation}
-
-
-
-\section{Python}
-=> use google colab'
-
+\begin{question}
+	Negate the following ($x_n \to x$):
+	$\forall \epsilon>0, \exists N \in \N \text{ s.t. } \forall n>N, \abs{x_n-x}<\epsilon$
+\end{question}
 

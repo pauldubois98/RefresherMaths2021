@@ -25,6 +25,24 @@
 \begin{proof}
 	$X \times \{y_k\}$  are all disjoint for $k \in \llbracket 1,\card{Y} \rrbracket$; use induction.
 \end{proof}
+\begin{property}[Cardinality of Sub-list]
+	$X$ sets: $\card{ \{ Y \text{ list} \mid \card{Y}=n \text{ and } y \in Y \implies y \in X \} } = \card{X}^n$
+\end{property}
+\begin{proof}
+	Just count!
+\end{proof}
+\begin{property}[Cardinality of Ordered Subsets]
+	$X$ sets: $\card{ \{ Y \text{ ordered set} \mid \card{Y}=n \text{ and } y \in Y \implies y \in X \} } = \frac{\card{X}!}{(\card{x}-n)!}$
+\end{property}
+\begin{proof}
+Just count!
+\end{proof}
+\begin{property}[Cardinality of Subsets]
+	$X$ sets: $\card{ \{ Y \subseteq X \mid \card{Y}=n \} } = \binom{\card{X}}{n}$
+\end{property}
+\begin{proof}
+	Just count!
+\end{proof}
 \begin{property}[Cardinality of Sets of Functions]
 	%Similar to Cartesian product:\\
 	$\card{ \{f: X \to Y\} } = \card{Y}^{\card{X}}$
@@ -51,5 +69,12 @@
 	Bijection is an injection between two sets of the same size.
 \end{proof}
 
+\begin{question}
+	\begin{itemize}
+		\item For $n$ students, if we record the order of people getting out of the room, how many possibilities are there?
+		\item Bench for 10 people, we have 5 boys, 5 girls, how many arrangements are there such that two boys/two girls are never seated next to each others?
+		\item Bench for 11 people, we have 6 boys, 5 girls, how many arrangements are there such that two boys/two girls are never seated next to each others?
+	\end{itemize}
+\end{question}
 
 
