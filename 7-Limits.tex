@@ -93,6 +93,26 @@ Supremum is the "smallest upper bound". Exists if $A$ is bounded.
 
 
 
+\section{Compactness}
+\begin{definition}[Diameter]
+	$\text{Diam}(B)=\sup\{ d(x,y) \mid x,y \in B \}$
+\end{definition}
+\begin{definition}[Boundedness]
+	$B \text{ is bounded } \iff \text{Diam}(B)<\infty$ 
+\end{definition}
+[proper definition: every cover has a finite sub-cover, however, in the cases we will consider (i.e. over $\R$ or $\C$):]
+\begin{definition}[Compactness (over $\R^n$)]
+	$C \text{ is compact over } \R^n \iff C \text{ is closed and bounded}$ 
+\end{definition}
+\begin{property}
+	$C \text{ is compact } \iff \forall (x_n)_{n \in \N} \subseteq C, (x_n) \text{ has a convergent subsequence}$
+\end{property}
+\begin{proof}
+	technical, using open covers
+\end{proof}
+
+
+
 \section{Continuity}
 
 \begin{definition}[$f$ continuous at $x$]
