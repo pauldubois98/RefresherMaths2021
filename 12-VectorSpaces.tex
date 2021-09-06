@@ -152,6 +152,106 @@ A basis is a largest LI set, or a smaller spanning set.
 	\end{itemize}
 \end{property}
 
+\section{Linear Maps}
+Here, $V$ and $W$ are vector spaces over $\F$.
+\begin{definition}[Linear Map]
+	$f: V \to W$ is linear if:
+	\begin{itemize}
+		\item $f(v+v')=f(v)+f(v') \forall v,v' \in V$
+		\item $f(k.v)=k.f(v) \forall v \in V, k \in \F$
+	\end{itemize}
+\end{definition}
+\begin{definition}
+	With $f: V \to W$:
+	\begin{itemize}
+		\item $f$ is an endomorphism if $V=W$
+		\item $f$ is an isomorphism if $f$ is bijective
+		\item $f$ is an automorphism if $V=W$ and $f$ is bijective
+		\item $f$ is a linear form if $W=\F$
+	\end{itemize}
+\end{definition}
+\begin{example}
+	\begin{itemize}
+		\item $\R \ni x \mapsto ax \in \R$ "classic linear map"
+		\item $\R\left[ x \right] \ni P \mapsto P' \in \R\left[ x \right]$ "derivative"
+		\item $\R^\R \ni f \mapsto f(0) \in \R$ "evaluation at 0"
+	\end{itemize}
+\end{example}
+\begin{property}
+	$f \text{linear} \implies f(0)=0$
+\end{property}
+\begin{proof}
+	exercise
+\end{proof}
+\begin{property}
+	$f: V \to W$ linear: $\Image{f}$ is a subspace of $W$, and $f^{-1}(W')$ is a subspace of $V$ if $W'$ is a subspace of $W$
+\end{property}
+\begin{proof}
+	exercise
+\end{proof}
+
+\begin{definition}[Kernel]
+	$\Ker{f}=f^{-1}(\{0\})$
+\end{definition}
+\begin{property}[Injectivity for Linear Functions]
+	$f$ linear: $f$ is injective iff $\Ker{f}=\{0\}$
+\end{property}
+\begin{proof}
+	prove both directions, easy from def
+\end{proof}
+
+\begin{property}[Composition of Linear Maps]
+	$f:V_1 \to V_2, g:V_2 \to V_3 \text{ linear maps } \implies f \circ g:V_1 \to V_3 \text{ is a linear map}$
+\end{property}
+\begin{proof}
+	easy from definition
+\end{proof}
+\begin{property}[Inverse of a Linear Map]
+	$f:V_1 \to V_2 \text{ linear map with inverse} \implies f^{-1}:V_2 \to V_1 \text{ is a linear map}$
+\end{property}
+\begin{proof}
+	easy from definition
+\end{proof}
+
+\begin{property}
+	$f:V_1 \to V_2 \text{ isomorphism}, B \text{ basis for } V_1 \implies f(B) \text{ is a basis for } V_2$ 
+\end{property}
+\begin{proof}
+	Use injectivity of $f$ to show $f(B)$ is LI, and surjectivity of $f$ to show $f(B)$ spans $V_2$.
+\end{proof}
+\begin{notation}[Isomorphic Spaces]
+	$V_1 \equiv V_2 \iff \exists f:V_1 \to V_2 \text{ isomorphic}$
+\end{notation}
+\begin{property}
+	A linear map is fully determined by its action on a basis.
+\end{property}
+\begin{proof}
+	using linearity
+\end{proof}
+\begin{property}[Dimension of Isomorphic Spaces]
+	$V_1 \equiv V_2 \iff \dim(V_1)=\dim(V_2)$ (in finite dimensions)
+\end{property}
+\begin{proof}
+	$\implies$ use isomorphism to transform basis; $\impliedby$ basis are of the same size, create a linear isomorphism from one basis to the other
+\end{proof}
+
+\begin{definition}[Rank of a Linear Map]
+	$\Rank{f}=\dim(\Image{f})$
+\end{definition}
+\begin{definition}[Nullity of a Linear Map]
+	$\Nullity{f}=\dim(\Ker{f})$
+\end{definition}
+\begin{theorem}[Kernel-Rank/Nullity-Rank]
+	$f:V \to W$ linear: $\Rank{f}+\Nullity{f}=\dim(V)$
+\end{theorem}
+\begin{proof}
+	Let $V_0$ a subspace such that $V_0 \oplus \Ker{f} = V$.
+	Then $g:x \in V_0 \to f(x) \in \Image{f}$ is an isomorphism.
+	$g$ is clearly injective, since $\Ker{g}=\Ker{f} \cap V_0 = \{0\}$
+	And $g$ is surjective since for any $y \in \Image{f}$, there exists $x \in V$ such that $f(x)=y$ and $x$ is uniquely decomposed into $x_1 + x_2$ with $x_1 \in V_0$ and $x_2 \in \Ker{f}$, so $f(x_1+x_2)=f(x_1)=g(x_1)=y$.
+\end{proof}
+
+
 
 
 
