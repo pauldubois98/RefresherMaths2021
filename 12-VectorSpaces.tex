@@ -1,0 +1,102 @@
+\chapter{Vector Spaces}
+\section{Axioms}
+\begin{definition}[Vector Space]
+	$\F$ a field (usually $\R$ or $\C$).
+	$V$ is a vector field over $\F$ if:
+	\begin{itemize}
+		\item [$V$ has addition] $\forall v,w \in V: v+w \in V$
+		\item [$V$ has multiplication by a scalar] $\forall v \in V, k \in \F: k.v \in V$
+	\end{itemize}
+	Such that:
+	\begin{itemize}
+		\item $\forall v \in V, k,l \in \F: (kl).v = k.(l.v)$
+		\item $\forall v \in V, k,l \in \F: (k+l).v = k.v + l.v$
+		\item $\forall v,w \in V, k \in \F: k.(v+w) = k.v + k.w$
+		\item $\forall v \in V: 1.v=v$
+		\item $\forall v \in V: 0.v=\textbf{0}$
+		\item $\forall k \in \F: k.\textbf{0}=\textbf{0}$
+	\end{itemize}
+\end{definition}
+\begin{example}
+	\begin{itemize}
+		\item $0$ over $\R$
+		\item $\R$ over $\R$
+		\item $\C$ over $\R$
+		\item $\C$ over $\C$
+		\item $\R^n$ over $\R$
+		\item $\R\left[x\right]$ over $\R$ (real polynomials)
+		\item $\R^{\N}$ over $\R$ (real sequences)
+		\item $\R^{\R}$ over $\R$ (real functions)
+		\item $V_1 \times V_2$ if $V_1$ and $V_2$ are vector spaces over the same field $\F$
+	\end{itemize}
+\end{example}
+
+\begin{definition}[Vector Sub-space]
+	$W \subseteq V$ is a vector subspace of $V$ if it is a vector space on its own.
+	Need to check:
+	\begin{itemize}
+		\item Closed under addition: $w,w' \in W \implies w+w' \in W$
+		\item Multiplication by a scalar: $w \in W, k \in \F \implies k.w \in W$
+		\item Contains the null vector: $\textbf{0} \in W$
+	\end{itemize}
+\end{definition}
+\begin{example}
+	\begin{itemize}
+		\item $0$ is a vector sub-space of $\R$
+		\item $\R$ is a vector sub-space of $\C$ over $\R$
+		\item $\R_d\left[x\right]$ is a vector sub-space of $\R\left[x\right]$ over $\R$ (real polynomials of degree $d$)
+		\item $C\left[ \R\right]$ is a vector sub-space of $\R^{\R}$ over $\R$ (real functions)
+	\end{itemize}
+\end{example}
+\begin{proposition}
+	$W_1, W_2 \text{ subspaces of } V \implies W_1 \cap W_2 \text{ subspace of } V$
+\end{proposition}
+\begin{proof}
+	in problem set
+\end{proof}
+
+\begin{property}[Direct product of vector spaces are vector spaces]
+	$V_1, V_2 \text{ vector spaces } \implies V_1 \times V_2 \text{ is a vector space}$\\
+	$(v_1,v_2),(v_1',v_2') \in V_1 \times V_2, k \in \F$:
+	\begin{itemize}
+		\item $(v_1,v_2)+(v_1',v_2')=(v_1+v_1',v_2+v_2')$
+		\item $k.(v_1,v_2)=(k.v_1,k.v_2)$
+	\end{itemize}
+\end{property}
+
+\begin{definition}[Linear combination]
+	$A \subset V \text{ vector space}$: $x$ is a linear combination of $A$ iff $\exists k \in \N \text{ s.t. } \exists k_1,\dots,k_n \in \F, x_1,\dots,x_n \in A \text{ s.t. } x=\sum_{i=1}^{n}k_i.x_i$
+\end{definition}
+\begin{definition}[Span]
+	$A \subset V \text{ vector space}$: $\Span{A}$ is the set of all vector that can be expressed as a linear combination of $A$, i.e. $\Span{A}=\{ \sum_{i=1}^{n}k_i.x_i \mid n\in \N, k_i \in \F, x_i\in A \}$
+\end{definition}
+\begin{example}
+	\begin{itemize}
+		\item $\Span{\{\textbf{1}\}}=\R$
+		\item $\Span{\{\textbf{0}\}}=\{\textbf{0}\}$
+		\item $\Span{\{\textbf{1},\textbf{i}\}}=\C$
+	\end{itemize}
+\end{example}
+\begin{property}
+	$\Span{A}$ is the smallest vector space containing $A$
+\end{property}
+\begin{proof}
+	any smaller set containing $A$ is not closed under addition/multiplication by scalar
+\end{proof}
+\begin{exercise}
+	Which of these can be seen as vector spaces?
+	\begin{itemize}
+		\item $\R^{\N}$
+		\item $\{ (x,y) \mid x^2+y^2 \leq 1 \}$ "unit disk"
+		\item $\{ (x,y) \mid x+y=0 \}$
+		\item $\{ (x,y) \mid x+y=1 \}$
+		\item $\{ f \in C\left[ a,b \right] \mid f(a)=f(b) \}$
+	\end{itemize}
+\end{exercise}
+
+
+
+
+
+
+
