@@ -57,10 +57,10 @@ Just count!
 	Count (without repetition).
 \end{proof}
 \begin{property}[Cardinality of Sets of Surjections]
-	$\card{ \{f: X \to Y \mid f \text{ surjective} \} } = \card{Y}^{\card{X}} - \card{Y}*(\card{Y}-1)^{\card{X}}$
+	$\card{ \{f: X \to Y \mid f \text{ surjective} \} } = \binom{\card{X}}{\card{Y}} . (\card{Y}!) . \card{Y}^{(\card{X}-\card{Y})} = \frac{\card{X} . \card{Y}^{(\card{X}-\card{Y})}}{(\card{X}-\card{Y})!}$
 \end{property}
 \begin{proof}
-	All functions but the non surjective ones.
+	Choose $\card{Y}$ elements in $X$ to map to all elements in $Y$, then map the rest to any thing in $Y$.
 \end{proof}
 \begin{property}[Cardinality of Sets of Bijections]
 	$\card{ \{f: X \to Y \mid f \text{ bijective} \} } = \card{Y}! = \card{X}!$
