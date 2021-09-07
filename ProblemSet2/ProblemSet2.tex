@@ -1,0 +1,134 @@
+\documentclass[]{article}
+
+%format
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[margin=2.5cm]{geometry}
+%math
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{nicefrac}
+\usepackage{mathtools}
+%others
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+%environments
+\newtheorem{question}{Question}
+%commands
+%\newcommand{\name}[num]{definition}
+\newcommand{\primes}{\mathbb{P}}
+%\newcommand{\P}{\mathbb{P}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\Norm}[2][]{\text{Norm}_{#1}(#2)}
+\newcommand{\inner}[2]{\left\langle #1,#2 \right\rangle}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\abs}[1]{| #1 |}
+\newcommand{\card}[1]{| #1 |}
+\newcommand{\curt}[1]{\sqrt[3]{#1}}
+\newcommand{\Ker}[1]{\text{Ker}(#1)}
+\newcommand{\Image}[1]{\text{Im}(#1)}
+\newcommand{\Trace}[1]{\text{Tr}(#1)}
+\newcommand{\Det}[1]{\text{Det}(#1)}
+\newcommand{\degree}[1]{\partial #1}
+\newcommand{\Pow}[1]{\mathcal{P}(#1)}
+
+%opening
+\title{Problem Set 2}
+\author{}
+\date{Due 14\textsuperscript{th} September 2021}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+	Only the questions with a star (*) are compulsory for submission;\\
+	It is however \textit{strongly} advised to attempt all question.
+\end{abstract}
+
+\section{Functions Properties}
+\begin{question}
+	Show that the composition preserve injectivity/surjectivity/bijectivity/invertibility:
+	$f: X \to Y, \ g: Y \to Z \text{ injectives } \implies f \circ g \text{ is injective}$\\
+	$f: X \to Y, \ g: Y \to Z \text{ surjectives } \implies f \circ g \text{ is surjective}$\\
+	$f: X \to Y, \ g: Y \to Z \text{ bijectives/invertibles } \implies f \circ g \text{ is bijective/invertible}$
+\end{question}
+\begin{question}
+	(*) An injection between two sets of the same size is bijective.
+\end{question}
+
+\section{Finite Cardinalities}
+
+\begin{question}[Counting the number of functions between two finite sets]
+	Let $X$ and $Y$ be two non-empty finite sets. We want to count the number of functions in $Y^X$.
+	\begin{enumerate}[label=\alph*.]
+		\item Let us assume that $\card{X} = n$ with $X = \{x_1,...,x_n\}$. Prove that the function
+		\begin{equation*}
+			\Phi : \begin{array}{lcl}
+				Y^X&\longrightarrow&Y^n\\
+				f&\longmapsto& (f(x_1),...,f(x_n))
+			\end{array}
+		\end{equation*}
+		is a bijection.
+		\item Deduce the value of $\card{Y^X}$.
+		\item Let $n\in \N^*$. Let us consider the set $\mathfrak{S}_n\subset \llbracket 1;n\rrbracket^{\llbracket 1;n\rrbracket}$ containing the bijections from $\llbracket 1;n\rrbracket$ to itself. Prove that the sequence $(\card{(\mathfrak{S}_n)})_{n\in \N^*}$ is defined by the recurrence relation
+		\begin{equation*}
+			\left\{\begin{array}{l}
+				\card{\mathfrak{S}_1} = 1\\
+				\forall n\in \N,~\card{\mathfrak{S}_{n+1}} = (n+1)\card{\mathfrak{S}_n}
+			\end{array}\right.
+		\end{equation*}
+		\textit{(hint : we can use the bijections $\forall k\in \llbracket 1;n\rrbracket,~ g_k:\llbracket 1;n\rrbracket \setminus \{k\}\rightarrow \llbracket 1;n-1\rrbracket$)}
+		\item The cardinal of $\mathfrak{S}_n$ is the factorial of $n$, denoted as $n!$. Write a function returning the value of the factorial for a given $n\in \N$ (by convention $0! = 1$).
+	\end{enumerate}
+\end{question}
+
+\begin{question}[Counting the number of sub-parts]
+	(*) We study the function $(n,p)\in \N^2\mapsto \binom{n}{k}\in \N$ the binomial coefficient, which is the number of subsets containing $p$ elements in a set containing $n$ elements.
+	\begin{enumerate}[label=\alph*.]
+		\item Prove that $\forall n,p\geq 1,~\displaystyle \binom{n}{p} = \binom{n-1}{p-1}+\binom{n-1}{p}$.
+		\item Deduce from this recurrence equation that
+		\begin{equation*}
+			\forall n\in \N,~\forall p\leq n,~\binom{n}{p} = \frac{n!}{(n-p)!p!}
+		\end{equation*}
+		\item Prove the formula
+		\begin{equation*}
+			\forall n\in \N, \sum_{k=0}^n \binom{n}{k} = 2^n
+		\end{equation*}
+		\item Derive the value of $\card{\mathcal{P}(\llbracket 1;n\rrbracket)}$ (power set).
+	\end{enumerate}
+\end{question}
+
+\section{Infinite Cardinalities}
+\begin{question}
+	(*) Find an explicit bijection between $\left[ a,b \right]$ and $\left[ c,d \right]$
+\end{question}
+\begin{question}
+	(*) Show that there is a bijection between $\left[ 0,1 \right[$ and $\{0,1\}^\N$
+\end{question}
+\begin{question}
+	(*) Let $\mathcal{A} = \{a,b,c,\dots,z\}$ be the set of letters in the alphabet.
+	Show explicitly that $\card{\mathcal{A} \cup \N}=\card{\N}$.
+\end{question}
+\begin{question}
+	Let $\C$ be the set of complex numbers. Compare $\R$ and $\C$.
+\end{question}
+\begin{question}
+	Let $\primes$ be the set of prime numbers. Compare $\primes$ with the usual sets (in particular with $\N$, $\Z$, $\Q$, $\R$).
+\end{question}
+
+\end{document}
