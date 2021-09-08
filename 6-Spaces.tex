@@ -34,6 +34,15 @@ $\inner{\_}{\_}$ is an inner product if it satisfies the following axioms:
 \begin{property}[Inner Product implies Norm]
 	Letting $\abs{x} = \sqrt{\inner{x}{x}}$.
 \end{property}
+
+\begin{property}[Cauchy-Schwarz inequality]
+	$\inner{x}{y}^2 \leq \inner{x}{x} \inner{y}{y}$
+\end{property}
+\begin{proof}
+	Let $P(\lambda)=\inner{x+\lambda y}{x+\lambda y}$.
+	This polynomial is never negative, so its discriminant must be non-positive.
+	Deduce the inequality from $\Delta \geq 0$.
+\end{proof}
 \begin{definition}[Orthogonal / Normal]
 	$x,y \text{ orthogonal } \iff x \perp y \iff \inner{x}{y}=0$
 \end{definition}
