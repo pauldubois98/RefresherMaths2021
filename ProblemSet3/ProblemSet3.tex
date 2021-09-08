@@ -1,0 +1,117 @@
+\documentclass[]{article}
+
+%format
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[margin=2.5cm]{geometry}
+%math
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{nicefrac}
+\usepackage{mathtools}
+%others
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+%environments
+\newtheorem{question}{Question}
+%commands
+%\newcommand{\name}[num]{definition}
+\newcommand{\primes}{\mathbb{P}}
+%\newcommand{\P}{\mathbb{P}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\Norm}[2][]{\text{Norm}_{#1}(#2)}
+\newcommand{\norm}[2][]{\text{Norm}_{#1}(#2)}
+\newcommand{\inner}[2]{\left\langle #1,#2 \right\rangle}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\abs}[1]{| #1 |}
+\newcommand{\card}[1]{| #1 |}
+\newcommand{\curt}[1]{\sqrt[3]{#1}}
+\newcommand{\Ker}[1]{\text{Ker}(#1)}
+\newcommand{\Image}[1]{\text{Im}(#1)}
+\newcommand{\Trace}[1]{\text{Tr}(#1)}
+\newcommand{\Det}[1]{\text{Det}(#1)}
+\newcommand{\degree}[1]{\partial #1}
+\newcommand{\Pow}[1]{\mathcal{P}(#1)}
+
+%opening
+\title{Problem Set 3}
+\author{}
+\date{Due 22\textsuperscript{nd} September 2021}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+	Only the questions with a star (*) are compulsory for submission;\\
+	It is however \textit{strongly} advised to attempt all question.
+\end{abstract}
+
+\section{Metric/Norm Spaces}
+\begin{question}
+	(*) $X,\norm{\_}$ is a norm space; we define $d(x,y)=\norm{x-y}$, so that $X,d$ is a metric space.
+	We have seen what the ball of radius $r$ centered at $x$ is in a metric space (i.e. using $d$).
+	Define it in terms of then norm.
+\end{question}
+
+\begin{question}
+	(*) We take $X=\R^2$, draw $B_1((0,0))$ (the unit ball) for the following norms:
+	\begin{itemize}
+		\item $\norm{(x,y)}=\abs{x}+\abs{y}$
+		\item $\norm{(x,y)}=\sqrt{x^2+y^2}$
+		\item $\norm{(x,y)}=\max(\abs{x},\abs{y})$
+		\item $\norm{(x,y)}=0 \text{ if } (x,y)=(0,0) \text{, } \norm{(x,y)}=1 \text{ else}$
+		\item $\norm{(x,y)}=0 \text{ if } (x,y)=(0,0) \text{, } \norm{(x,y)}=2 \text{ else}$
+	\end{itemize}
+\end{question}
+\begin{question}
+	For which values of $p\geq 0$ is $\norm{(x,y)}=\sqrt[p]{\abs{x}^p+\abs{y}^p}$ a norm for $\R^2$?
+\end{question}
+\begin{question}
+	Find two different norms for $\R^n$ (give their definitions).
+\end{question}
+
+
+
+\section{Sequences Convergence}
+\begin{question}
+	Find the limit of the following sequences, and prove your claim carefully:
+	\begin{itemize}
+		\item (*) $x_n=\frac{1}{n^2}$
+		\item $x_n=\frac{1}{n^3}$
+		\item $x_n=\frac{1}{n^k}$ for some $k>0$
+		\item (*) $x_n=\frac{1}{2^n}$
+		\item $x_n=\frac{1}{3^n}$
+		\item $x_n=\frac{1}{k^n}$ for some $k>1$
+		\item (*) $x_n=\frac{3n^2+2n+1}{6n^2-n+2}$
+		\item $x_n=\frac{2n+1}{6n^2+9n-5}$
+		\item (hard) $x_n=\frac{n}{2^n}$
+	\end{itemize}
+\end{question}
+
+\begin{question}
+	$x_n  \to x$, $y_n \to y$;
+	Prove the following:
+	\begin{itemize}
+		\item (*) $x_n+y_n \to x+y$
+		\item $x_n*y_n \to x*y$
+		\item if $y_n \neq 0$, and $y \neq 0$: $x_n/y_n \to x/y$
+	\end{itemize}
+\end{question}
+
+
+\end{document}
