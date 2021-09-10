@@ -1,0 +1,115 @@
+\documentclass[]{article}
+
+%format
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[margin=2.5cm]{geometry}
+%math
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{nicefrac}
+\usepackage{mathtools}
+%others
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+%environments
+\newtheorem{question}{Question}
+%commands
+%\newcommand{\name}[num]{definition}
+\newcommand{\primes}{\mathbb{P}}
+%\newcommand{\P}{\mathbb{P}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\Norm}[2][]{\text{Norm}_{#1}(#2)}
+\newcommand{\norm}[2][]{\text{Norm}_{#1}(#2)}
+\newcommand{\inner}[2]{\left\langle #1,#2 \right\rangle}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\abs}[1]{| #1 |}
+\newcommand{\card}[1]{| #1 |}
+\newcommand{\curt}[1]{\sqrt[3]{#1}}
+\newcommand{\Ker}[1]{\text{Ker}(#1)}
+\newcommand{\Image}[1]{\text{Im}(#1)}
+\newcommand{\Trace}[1]{\text{Tr}(#1)}
+\newcommand{\Det}[1]{\text{Det}(#1)}
+\newcommand{\degree}[1]{\partial #1}
+\newcommand{\Pow}[1]{\mathcal{P}(#1)}
+
+%opening
+\title{Problem Set 5}
+\author{}
+\date{Due 29\textsuperscript{nd} September 2021}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+	Only the questions with a star (*) are compulsory for submission;\\
+	It is however \textit{strongly} advised to attempt all question.
+\end{abstract}
+
+\section{Sequences}
+\begin{question}
+	(*) Show that $S_n = \sum_{k=1}^{n}\frac{1}{k}$ is such that $S_{2^n} \geq \frac{n}{2}$.\\
+	Is $\sum_{n=1}^{\infty} \frac{1}{n}$ convergent?
+\end{question}
+
+\begin{question}(Sum of Arithmetic Sequence)
+	a*) Rewrite $S=\sum_{k=0}^{n}k$ with $k$ running from $n$ to $0$ (instead of from $0$ to $n$).\\
+	b*) Using both expressions for $S$, express $2S$ as a product of two terms, and deduce an expression for $S$.\\
+	c*) Let $(x_n)$ be an arithmetic sequence: $x_0=b$, $x_{n+1}=a+x_n$ (we have shown before that the explicit formula for $x_n$ is $x_n=b+a*n$).\\
+	Find the sum of the first $n$ terms: $\sum_{k=0}^{n}x_k$\\
+	d*) When is the series $\sum_{n=0}^{\infty}x_n$ convergent/divergent?
+\end{question}
+\begin{question}(Sum of Geometric  Sequence)
+	a*) Multiply $S=\sum_{k=0}^{n}\alpha^k$ by $(1-\alpha)$ and simplify the expression\\
+	b*) Deduce an expression for $S$.\\
+	c*) Let $(x_n)$ be a geometric sequence: $x_0=b$, $x_{n+1}=a*x_n$ (we have shown before that the explicit formula for $x_n$ is $x_n=b*a^n$).\\
+	Find the sum of the first $n$ terms: $\sum_{k=0}^{n}x_k$\\
+	d*) When is the series $\sum_{n=0}^{\infty}x_n$ convergent/divergent?\\
+	(BONUS) e*) When convergent (if ever), what values does the series $\sum_{n=0}^{\infty}x_n$ converge to?
+\end{question}
+
+
+
+\begin{question}
+	Are these convergent series?
+	\begin{itemize}
+		\item $\sum_{n=1}^{+\infty}\frac{(-17)^n}{4^{2n+1}(n+1)}$
+		\item $\sum_{n=1}^{+\infty}\frac{3^{2n+1}}{n^n}$
+		\item $\sum_{n=1}^{+\infty}\frac{n!}{n^n}$
+		\item $\sum_{n=1}^{+\infty}\frac{n^n}{(2n-1)!}$
+		\item $\sum_{n=1}^{+\infty}\left( \frac{5n-3n^3}{0.5n^3+2} \right)^n$
+		\item $\sum_{n=1}^{+\infty}\frac{(-12)^n}{n}$
+		\item $\sum_{n=1}^{+\infty}\frac{(-2)^{n+1}n}{9^n}$
+		\item $\sum_{n=1}^{+\infty}\frac{1}{n^3}$
+	\end{itemize}
+	Fact: $\lim\limits_{n \to +\infty} n^{\frac{1}{n}}=1$
+\end{question}
+
+
+\begin{question}
+	Calculate the derivative of the following functions:\\
+	$f(x) = \frac{5x^3-2x+1}{2x-7}$
+	$g(x) = ax^2+bx+c$
+\end{question}
+
+\begin{question}
+	Find the anti-derivative of $x^n$.
+\end{question}
+
+
+\end{document}
