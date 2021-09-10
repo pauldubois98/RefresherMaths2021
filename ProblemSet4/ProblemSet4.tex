@@ -1,0 +1,112 @@
+\documentclass[]{article}
+
+%format
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage[margin=2.5cm]{geometry}
+%math
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+\usepackage{nicefrac}
+\usepackage{mathtools}
+%others
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+%environments
+\newtheorem{question}{Question}
+%commands
+%\newcommand{\name}[num]{definition}
+\newcommand{\primes}{\mathbb{P}}
+%\newcommand{\P}{\mathbb{P}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\Norm}[2][]{\text{Norm}_{#1}(#2)}
+\newcommand{\norm}[2][]{\text{Norm}_{#1}(#2)}
+\newcommand{\inner}[2]{\left\langle #1,#2 \right\rangle}
+\newcommand{\floor}[1]{\lfloor #1 \rfloor}
+\newcommand{\ceil}[1]{\lceil #1 \rceil}
+\newcommand{\abs}[1]{| #1 |}
+\newcommand{\card}[1]{| #1 |}
+\newcommand{\curt}[1]{\sqrt[3]{#1}}
+\newcommand{\Ker}[1]{\text{Ker}(#1)}
+\newcommand{\Image}[1]{\text{Im}(#1)}
+\newcommand{\Trace}[1]{\text{Tr}(#1)}
+\newcommand{\Det}[1]{\text{Det}(#1)}
+\newcommand{\degree}[1]{\partial #1}
+\newcommand{\Pow}[1]{\mathcal{P}(#1)}
+
+%opening
+\title{Problem Set 4}
+\author{}
+\date{Due 22\textsuperscript{nd} September 2021}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+	Only the questions with a star (*) are compulsory for submission;\\
+	It is however \textit{strongly} advised to attempt all question.
+\end{abstract}
+
+\section{Sequences}
+\begin{question}
+	$X,\norm{\_}$ is a norm space; $(x_n)$ is a sequence in $X$.
+	Define what is meant by $x_n \to x$ in this case (remember we defined it in class for $X,d$ a metric space, and we also saw how to define a metric space from a norm space).
+\end{question}
+
+\begin{question}(Arithmetic Sequence)
+	$(x_n)$ is defined by iteration as follows: $x_0=b$, $x_{n+1}=a+x_n$.\\
+	a*) Prove that the explicit formula for $x_n$ is $x_n=b+a*n$.\\
+	b*) State and prove the behavior as $n \to +\infty$ (split in cases for different values of $a$ or $b$ if needed).
+\end{question}
+\begin{question}(Geometric  Sequence)
+	$(x_n)$ is defined by iteration as follows: $x_0=b$, $x_{n+1}=a*x_n$.\\
+	a*) Prove that the explicit formula for $x_n$ is $x_n=b*a^n$.\\
+	b*) State and prove the behavior as $n \to +\infty$ (split in cases for different values of $a$ or $b$ if needed).
+\end{question}
+
+\begin{question}
+	The Syracuse sequence is defined by the recurrence relation as follows:
+	\begin{itemize}
+		\item $x_{n+1}=\frac{x_n}{2}$ if $x_n$ is even
+		\item $x_{n+1}=3*x_n+1$ if $x_n$ is odd
+	\end{itemize}
+	We start with a natural number (note that the sequence takes only integral values).\\
+	a) Conjecture how many iterations it takes to reach 1 starting from 7,8,15,16.\\
+	b) Calculate how many iterations it takes to reach 1 starting from 7,8,15,16.\\
+	c) Was your first intuition correct?\\
+	(You may want to use a calculator to speed up calculations)
+\end{question}
+
+\begin{question}
+	(*)	Let $f(x) = \frac{2x^2-3x+9}{4x-5}$\\
+	Find the asymptote as $x \to \pm\infty$; Find the singularity of $f$.\\
+	Draw a graph of $f$ to the best of your knowledge, using the above information.
+\end{question}
+
+\begin{question}
+	(*) Let $x_{n+1}=\frac{1}{2}x_n+1$, $x_0=0$.\\
+	Show that the general term of this sequence is given by $x_n=2-\frac{2}{2^n}$.\\
+	Deduce the limit of the sequence.
+\end{question}
+
+\begin{question}
+	Find a set $X$ such that $\forall x,y \in X, d(x,y)<\text{Diam}(X)$ (i.e. $\text{Diam}(X)=\sup(\{d(x,y) \mid x,y \in X\})$ but $\text{Diam}(X) \neq \max(\{d(x,y) \mid x,y \in X\})$).\\
+	($X,d$ can be a metric space of your choice, but I advise $X=\R$, $d(x,y)=\abs{x-y}$ to begin with)
+\end{question}
+
+
+\end{document}
