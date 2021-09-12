@@ -6,17 +6,26 @@
 
 \section{Convergence \& Divergence}
 
-\begin{definition}[$(x_n) \subseteq \F$ converges to $x \in \F$]
+\begin{definition}[$(x_n) \subseteq X$ converges to $x \in X$]
 	$\,\forall \varepsilon > 0, \ \exists N \text{ s.t. } \forall n \geq N, \ d(x_n,x) < \varepsilon$
 \end{definition}
 We write $x_n \xrightarrow[n \to +\infty]{} x \text{ or } \lim\limits_{n \to +\infty} x_n = x$.
 Note that convergence is defined w.r.t. a metric (or a norm/inner product, which induces a metric).
 
+\begin{definition}[$(x_n) \subseteq \R$ converges to $x \in \R$]
+	$\,\forall \varepsilon > 0, \ \exists N \text{ s.t. } \forall n \geq N, \ \abs{x_n-x} < \varepsilon$
+\end{definition}
 \begin{definition}[$(x_n) \subseteq \R$ diverges to $+\infty$]
 	$\,\forall M \in \R, \ \exists N \text{ s.t. } \forall n \geq N, \ x_n > M$
 \end{definition}
 We write $x_n \xrightarrow[n \to \infty]{} +\infty \text{ or } \lim\limits_{n \to +\infty} x_n = +\infty$.
 Note that divergence is only defined over $\R$; divergence to $-\infty$ is defined similarly.
+
+\begin{question}
+	\item Define divergence to $-\infty$
+	\item Arithmetic sequence: find limit
+	\item Geometric sequence: find limit
+\end{question}
 
 \begin{definition}[Sub-sequence]
 	$\phi: \N \to \N$ strictly increasing defines the sub-sequence $(x_{\phi(n)})$ of the sequence $(x_n)$.
@@ -51,6 +60,23 @@ Equivalent definition: $\forall x_n \to x \text{ as } n \to +\infty, y_n = f(x_n
 	$\frac{0}{0}$, $\frac{\infty}{\infty}$, $0 \times \infty$, $1^\infty$, $\infty - \infty$, $0^0$, $\infty^0$
 \end{property}
 E.g.: $x^2 \times \frac{1}{x} \to \infty$; $x^2 \times \frac{1}{x^2} \to 1$; $x^2 \times \frac{1}{x^3} \to 0$.
+
+\begin{theorem}[Comparison Test]
+	Let $x_n \leq y_n \ \forall n \in \N$, then:
+	\begin{itemize}
+		\item $x_n \to +\infty \implies y_n \to +\infty$
+		\item $y_n \to -\infty \implies x_n \to -\infty$
+	\end{itemize}
+\end{theorem}
+\begin{proof}
+	from def
+\end{proof}
+\begin{theorem}[Sand-wish Theorem / Two Policemen Theorem]
+	Let $x_n \leq y_n \leq z_n \ \forall n \in \N; l \in \R$, then $x_n \to l \text{ and } z_n \to l \implies y_n \to l$.
+\end{theorem}
+\begin{proof}
+	from def
+\end{proof}
 
 \begin{theorem}[Fixed Point Theorem]
 	$x_{n+1} = f(x_n) \text{ and } (x_n) \to l \implies l = f(l)$ (i.e. $l$ is a fixed point of $f$). 
@@ -100,6 +126,8 @@ Supremum is the "smallest upper bound". Exists if $A$ is bounded.
 \begin{definition}[Boundedness]
 	$B \text{ is bounded } \iff \text{Diam}(B)<\infty$ 
 \end{definition}
+
+
 [proper definition: every cover has a finite sub-cover, however, in the cases we will consider (i.e. over $\R$ or $\C$):]
 \begin{definition}[Compactness (over $\R^n$)]
 	$C \text{ is compact over } \R^n \iff C \text{ is closed and bounded}$ 
@@ -114,7 +142,6 @@ Supremum is the "smallest upper bound". Exists if $A$ is bounded.
 
 
 \section{Continuity}
-
 \begin{definition}[$f$ continuous at $x$]
 	$\lim\limits_{x' \to x} f(x') = f(x)$
 \end{definition}
@@ -125,7 +152,6 @@ Supremum is the "smallest upper bound". Exists if $A$ is bounded.
 	Show $x^n$ is continuous (for all $n$).
 \end{question}
 "can be plotted in a single trace/line; without lifting the pen"
-[Lipschitz-continuous??]
 
 
 
@@ -214,5 +240,42 @@ E.g.: $\sum_{n \geq 2} \frac{1}{n^2}
 = \left[ -\frac{1}{x} \right]_{x=2}^{x=\infty}
 = -0 +\frac{1}{2} < \infty$
 
+
+\begin{property}[Ratio Test]
+	$\lim\limits_{n \to +\infty} \abs{\frac{x_{n+1}}{x_n}}=L$
+	\begin{itemize}
+		\item $L<1$: $\sum_{n \in \N}x_n$ converges
+		\item $L>1$: $\sum_{n \in \N}x_n$ diverges
+		\item $L=1$: $\sum_{n \in \N}x_n$ is unknown
+	\end{itemize}
+\end{property}
+\begin{question}
+	Are these convergent series?
+	\begin{itemize}
+		\item $\sum_{n=1}^{+\infty}\frac{(-10)^n}{4^{2n+1}(n+1)}$
+		\item $\sum_{n=1}^{+\infty}\frac{n!}{5^n}$
+		\item $\sum_{n=1}^{+\infty}\frac{n^2}{(2n-1)!}$
+		\item $\sum_{n=1}^{+\infty}\frac{9^n}{(-2)^{n+1}n}$
+	\end{itemize}
+\end{question}
+
+
+\begin{property}[Root Test]
+	$\lim\limits_{n \to +\infty} \sqrt[n]{\abs{x_n}}=L$
+	\begin{itemize}
+		\item $L<1$: $\sum_{n \in \N}x_n$ converges
+		\item $L>1$: $\sum_{n \in \N}x_n$ diverges
+		\item $L=1$: $\sum_{n \in \N}x_n$ is unknown
+	\end{itemize}
+\end{property}
+Fact: $\lim\limits_{n \to +\infty} n^{\frac{1}{n}}=1$
+\begin{question}
+	Are these convergent series?
+	\begin{itemize}
+		\item $\sum_{n=1}^{+\infty}\frac{n^n}{3^{2n+1}}$
+		\item $\sum_{n=1}^{+\infty}\left( \frac{5n-3n^3}{7n^3+2} \right)^n$
+		\item $\sum_{n=1}^{+\infty}\frac{(-12)^n}{n}$
+	\end{itemize}
+\end{question}
 
 
