@@ -5,7 +5,7 @@ This course teaches basic mathematical methodologies for proofs.
 It is intended for students with a lack of mathematical background, or with a lack of confidence in mathematics.
 The course will try to cover most of the prerequisites of the courses in the master, mainly linear algebra, differential calculus, integration, and asymptotic analysis.
 
-Usefull links:
+Useful links:
 - [Course Notes](https://github.com/pauldubois98/RefresherMaths/blob/main/cours.pdf)
 
 - [Problem Set 1](https://github.com/pauldubois98/RefresherMaths/blob/main/ProblemSet1/ProblemSet1.pdf) ; 
