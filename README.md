@@ -1,4 +1,4 @@
-# Refresher Maths
+# Refresher Maths 2021
 ## Master Data Science and Buisness Analyctics @ ESSEC - CentraleSupélec
 
 This course teaches basic mathematical methodologies for proofs.
